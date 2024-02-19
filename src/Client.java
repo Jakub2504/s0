@@ -1,6 +1,4 @@
-import java.io.DataOutputStream;
-import java.io.IOException;
-import java.io.OutputStream;
+import java.io.*;
 import java.net.Socket;
 import java.net.UnknownHostException;
 
@@ -14,6 +12,8 @@ public class Client {
         try{
             Socket s = new Socket(host, port);
             OutputStream os = s.getOutputStream();
+            InputStreamReader isr = new InputStreamReader();
+            isr.read();
             DataOutputStream dos = new DataOutputStream(os);
             dos.writeInt(99);
             dos.flush();
